@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Devionic - Inspiring Innovation Digitally",
+  "main": "server.cjs",
   "scripts": {
+    "start": "node server.cjs",
+    "postinstall": "npm --prefix backend install",
     "dev": "node scripts/dev-full.cjs",
     "dev:frontend": "vite",
     "build": "vite build",

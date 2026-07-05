@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devionic.com/sitemap.xml

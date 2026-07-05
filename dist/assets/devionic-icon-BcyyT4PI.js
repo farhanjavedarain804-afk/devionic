@@ -1,0 +1,1 @@
+var e=`/assets/devionic-icon-CqebXKXb.png`;export{e as default};
