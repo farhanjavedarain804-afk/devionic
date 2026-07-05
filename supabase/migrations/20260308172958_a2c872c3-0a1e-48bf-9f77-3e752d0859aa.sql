@@ -1,0 +1,1 @@
+ALTER TABLE public.services ALTER COLUMN code SET DEFAULT ('SRV-' || upper(substr(gen_random_uuid()::text, 1, 6)));

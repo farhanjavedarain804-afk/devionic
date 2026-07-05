@@ -1,0 +1,1 @@
+ALTER TABLE public.services ADD COLUMN code text DEFAULT NULL, ADD COLUMN minimum_charges numeric DEFAULT 0;

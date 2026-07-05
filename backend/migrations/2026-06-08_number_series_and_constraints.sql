@@ -1,0 +1,36 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+CREATE TABLE IF NOT EXISTS number_series (
+  id CHAR(36) PRIMARY KEY,
+  series_key VARCHAR(100) NOT NULL,
+  prefix VARCHAR(20) NOT NULL,
+  series_year INT NOT NULL,
+  padding INT NOT NULL DEFAULT 6,
+  last_number INT NOT NULL DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_series_year (series_key, series_year),
+  UNIQUE KEY uq_prefix_year (prefix, series_year)
+);
+
+ALTER TABLE users
+  ADD COLUMN IF NOT EXISTS department_id CHAR(36) NULL,
+  ADD COLUMN IF NOT EXISTS branch_id CHAR(36) NULL,
+  ADD COLUMN IF NOT EXISTS custom_permissions JSON NULL;
+
+ALTER TABLE profiles
+  ADD COLUMN IF NOT EXISTS last_login_ip VARCHAR(50) NULL,
+  ADD COLUMN IF NOT EXISTS last_login_dns VARCHAR(255) NULL,
+  ADD COLUMN IF NOT EXISTS last_login_location VARCHAR(255) NULL,
+  ADD COLUMN IF NOT EXISTS last_login_device VARCHAR(100) NULL,
+  ADD COLUMN IF NOT EXISTS last_login_browser VARCHAR(100) NULL,
+  ADD COLUMN IF NOT EXISTS last_login_os VARCHAR(100) NULL;
+
+ALTER TABLE quote_requests
+  ADD COLUMN IF NOT EXISTS company_name VARCHAR(255) NULL,
+  ADD COLUMN IF NOT EXISTS country VARCHAR(255) NULL;
+
+ALTER TABLE attendance
+  ADD UNIQUE KEY uq_attendance_staff_date (staff_id, date);
+
+SET FOREIGN_KEY_CHECKS = 1;
