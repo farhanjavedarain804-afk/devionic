@@ -444,10 +444,9 @@ const HowItWorks = () => {
               <a href="https://wa.me/923177121841" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-8"
+                  className="bg-[#25D366] hover:bg-[#1da851] text-white font-semibold px-8 shadow-md"
                 >
-                  Chat on WhatsApp <Phone size={16} className="ml-2" />
+                  <Phone size={16} className="mr-1" /> Chat on WhatsApp
                 </Button>
               </a>
             </div>
