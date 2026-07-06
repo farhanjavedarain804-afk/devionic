@@ -159,7 +159,7 @@ const faqs = [
   {
     question: "What happens if I miss a payment deadline?",
     answer:
-      "If a milestone or invoice payment is overdue by more than 14 days after our written notice, we may pause work on the project until the outstanding amount is settled. Late payments may accrue a late fee at 1.5% per month as outlined in our Terms & Conditions. If you anticipate any difficulty with a payment, please contact us proactively so we can discuss flexible arrangements.",
+      "If a milestone or invoice payment is overdue by more than 14 days after our written notice, we may pause work on the project until the outstanding amount is settled. Late payments may accrue a late fee at 2.5% per day as outlined in our Terms & Conditions. If you anticipate any difficulty with a payment, please contact us proactively so we can discuss flexible arrangements.",
   },
 ];
 
