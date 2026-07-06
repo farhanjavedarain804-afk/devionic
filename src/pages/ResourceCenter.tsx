@@ -79,7 +79,7 @@ const ResourceCenter = () => {
     queryKey: ["public-resources"],
     queryFn: async () => {
       const resp = await apiClient.get("/public/resources");
-      return resp.data || [];
+      return Array.isArray(resp.data) ? resp.data : [];
     },
   });
 

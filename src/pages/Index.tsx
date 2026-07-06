@@ -64,11 +64,11 @@ const Index = () => {
     queryKey: ["public-testimonials"],
     queryFn: async () => {
       const response = await apiClient.get("/public/testimonials");
-      return response.data || [];
+      return Array.isArray(response.data) ? response.data : [];
     },
   });
 
-  const displayTestimonials = testimonials.length > 0 ? testimonials : [
+  const displayTestimonials = Array.isArray(testimonials) && testimonials.length > 0 ? testimonials : [
     { id: "1", name: "Ahmad R.", role: "CEO", company: "TechVenture", message: "Devionic transformed our business with a stunning website and powerful digital marketing strategy. Highly recommended!", rating: 5 },
     { id: "2", name: "Sarah K.", role: "Founder", company: "StyleHub", message: "Their UI/UX design and e-commerce solution helped us increase sales by 200%. Exceptional team!", rating: 5 },
     { id: "3", name: "Bilal M.", role: "Director", company: "CloudSync", message: "Professional, reliable, and innovative. Devionic delivered our AI automation project ahead of schedule.", rating: 5 },

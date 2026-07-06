@@ -27,7 +27,7 @@ const Careers = () => {
     queryKey: ["jobs"],
     queryFn: async () => {
       const response = await apiClient.get("/public/jobs");
-      return response.data || [];
+      return Array.isArray(response.data) ? response.data : [];
     },
   });
 
@@ -35,7 +35,7 @@ const Careers = () => {
     queryKey: ["internships"],
     queryFn: async () => {
       const response = await apiClient.get("/public/internships");
-      return response.data || [];
+      return Array.isArray(response.data) ? response.data : [];
     },
   });
 
