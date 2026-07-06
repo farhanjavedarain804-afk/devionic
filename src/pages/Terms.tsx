@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Scale, Shield, Handshake, Gavel, Users, CreditCard, Globe, Clock, Ban, AlertCircle, Mail, Lock } from "lucide-react";
+import { FileText, Scale, Shield, Handshake, Gavel, Users, CreditCard, Globe, Clock, Ban, AlertCircle, Mail, Lock, RotateCcw } from "lucide-react";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import ContentContainer from "@/components/ContentContainer";
@@ -25,7 +25,7 @@ const Terms = () => {
 
   return (
     <Layout>
-      <PageHero title="Terms &" highlight="Conditions" subtitle="Please read these terms carefully before using our services." />
+      <PageHero title="Terms, Conditions &" highlight="Refund Policy" subtitle="Please read these terms carefully before using our services." />
 
       <section className="py-12 bg-background">
         <ContentContainer variant="default">
@@ -79,7 +79,7 @@ const Terms = () => {
           <h3 className="text-foreground font-semibold flex items-center gap-2">
             <CreditCard size={18} className="text-accent" /> 5. Payment Terms and Pricing
           </h3>
-          <p className="text-justify">Payment terms are specified in individual project proposals, Statements of Work, or service agreements. Unless otherwise agreed in writing: (a) Devionic may require an upfront deposit of 30% to 50% of the total estimated project cost before commencing any work; (b) milestone-based payments are due within 7 calendar days of each milestone delivery and client acceptance; (c) final payment is due within 14 calendar days of project delivery and formal acceptance by the client; (d) late payments shall accrue interest at a rate of 1.5% per month (18% per annum) on the outstanding balance from the due date until paid in full, to the extent permitted by applicable law; (e) all prices are quoted exclusive of applicable taxes, duties, or government levies, which shall be borne by the client unless explicitly stated otherwise; (f) Devionic reserves the right to suspend work on any project for which payment is overdue by more than 14 days after written notice; (g) invoices not contested in writing within 15 days of issuance shall be deemed accepted and payable in full. Refund requests are evaluated on a case-by-case basis and are subject to management approval. Deposits for commenced projects are non-refundable.</p>
+          <p className="text-justify">Payment terms are specified in individual project proposals, Statements of Work, or service agreements. Unless otherwise agreed in writing: (a) Devionic may require an upfront deposit of 30% to 50% of the total estimated project cost before commencing any work; (b) milestone-based payments are due within 7 calendar days of each milestone delivery and client acceptance; (c) final payment is due within 14 calendar days of project delivery and formal acceptance by the client; (d) late payments shall accrue a late fee at a rate of 1.5% per month (18% per annum) on the outstanding balance from the due date until paid in full, to the extent permitted by applicable law; (e) all prices are quoted exclusive of applicable taxes, duties, or government levies, which shall be borne by the client unless explicitly stated otherwise; (f) Devionic reserves the right to suspend work on any project for which payment is overdue by more than 14 days after written notice; (g) invoices not contested in writing within 15 days of issuance shall be deemed accepted and payable in full. Refund requests are evaluated on a case-by-case basis and are subject to management approval. Deposits for commenced projects are non-refundable.</p>
 
           {/* ── 6 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
@@ -125,43 +125,57 @@ const Terms = () => {
 
           {/* ── 13 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
-            <AlertCircle size={18} className="text-accent" /> 13. Indemnification
+            <RotateCcw size={18} className="text-accent" /> 13. Refund Policy
           </h3>
-          <p className="text-justify">The Client agrees to indemnify, defend, and hold harmless Devionic, its officers, directors, employees, and agents from and against any and all claims, demands, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) the Client's breach of any representation, warranty, or obligation under these Terms; (b) the Client's use of the Deliverables in any manner not authorized by the project agreement; (c) any claim that materials provided by the Client to Devionic infringe upon the intellectual property rights, privacy rights, or any other rights of any third party; (d) any content, data, or materials provided by the Client that are defamatory, obscene, unlawful, or otherwise objectionable.</p>
+          <p className="text-justify">Devionic is committed to fair and transparent handling of all refund requests. Because our primary services involve custom work performed specifically for each client, the following refund terms apply:</p>
+          <ul className="list-disc pl-5 space-y-1 text-sm">
+            <li><strong>Custom Projects (Software, Web, App Development):</strong> Upfront deposits are refundable on a pro-rata basis reflecting work already completed. If no work has commenced, the deposit is fully refundable, less applicable payment-gateway processing fees that are non-recoverable. Milestone payments for milestones already approved by the client are non-refundable.</li>
+            <li><strong>Pre-Packaged Products:</strong> Eligible for a full refund within 7 calendar days of purchase if no deliverable has been downloaded, accessed, or delivered.</li>
+            <li><strong>Subscriptions &amp; Retainers:</strong> Cancellable at any time. Pro-rata refunds for the unused billing cycle are issued only where required by applicable law.</li>
+            <li><strong>Erroneous or Duplicate Payments:</strong> Fully refundable upon verification within 5&ndash;7 business days.</li>
+            <li><strong>Services Not Rendered:</strong> Full refund of the amount paid for the undelivered portion if Devionic fails to deliver without fault on the client's part.</li>
+          </ul>
+          <p className="text-justify">Refund requests must be submitted in writing to <strong>info@devionic.com</strong> with the subject line "Refund Request," including the transaction reference, invoice number, date, amount, reason, and supporting evidence. Requests are acknowledged within 2 business days and resolved within 7&ndash;10 business days. Approved refunds are returned to the original payment method and may take an additional 5&ndash;10 business days to appear in your account. Non-refundable items include: work already performed and milestones already approved; third-party costs (domains, hosting, SSL, licences) incurred on your behalf; deliverables already downloaded, deployed, or transferred; and non-recoverable payment-gateway processing fees. Initiating a chargeback before contacting us may result in account suspension pending resolution.</p>
 
           {/* ── 14 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
-            <AlertCircle size={18} className="text-accent" /> 14. Force Majeure
+            <AlertCircle size={18} className="text-accent" /> 14. Indemnification
           </h3>
-          <p className="text-justify">Neither party shall be held liable for any failure or delay in the performance of its obligations under these Terms if such failure or delay results from circumstances beyond the reasonable control of that party, including but not limited to: natural disasters, pandemics, epidemics, government actions, wars, terrorism, civil unrest, strikes, labor disputes, power failures, internet outages, cyber attacks, acts of God, or any other event beyond the party's control. The affected party shall notify the other party in writing within 5 business days of the occurrence of such event and shall use commercially reasonable efforts to mitigate its impact. If the force majeure event continues for more than 60 consecutive days, either party may terminate the affected engagement without liability.</p>
+          <p className="text-justify">The Client agrees to indemnify, defend, and hold harmless Devionic, its officers, directors, employees, and agents from and against any and all claims, demands, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) the Client's breach of any representation, warranty, or obligation under these Terms; (b) the Client's use of the Deliverables in any manner not authorized by the project agreement; (c) any claim that materials provided by the Client to Devionic infringe upon the intellectual property rights, privacy rights, or any other rights of any third party; (d) any content, data, or materials provided by the Client that are defamatory, obscene, unlawful, or otherwise objectionable.</p>
 
           {/* ── 15 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
-            <Gavel size={18} className="text-accent" /> 15. Governing Law and Dispute Resolution
+            <AlertCircle size={18} className="text-accent" /> 15. Force Majeure
           </h3>
-          <p className="text-justify">These Terms shall be governed by and construed in accordance with the laws of the Islamic Republic of Pakistan, without regard to its conflict of laws principles. Any disputes arising out of or related to these Terms shall first be attempted to be resolved through good-faith negotiation between the parties within 30 days of written notice. If negotiation fails, the dispute shall be submitted to mediation through a mutually agreed mediator. If mediation fails within 60 days, either party may pursue legal remedies through the appropriate courts of competent jurisdiction in District Layyah, Punjab, Pakistan. The Client agrees to submit to the jurisdiction of these courts for the resolution of any such disputes. Notwithstanding the foregoing, Devionic may seek injunctive or other equitable relief in any court of competent jurisdiction to protect its intellectual property or confidential information without the requirement to post a bond.</p>
+          <p className="text-justify">Neither party shall be held liable for any failure or delay in the performance of its obligations under these Terms if such failure or delay results from circumstances beyond the reasonable control of that party, including but not limited to: natural disasters, pandemics, epidemics, government actions, wars, terrorism, civil unrest, strikes, labor disputes, power failures, internet outages, cyber attacks, acts of God, or any other event beyond the party's control. The affected party shall notify the other party in writing within 5 business days of the occurrence of such event and shall use commercially reasonable efforts to mitigate its impact. If the force majeure event continues for more than 60 consecutive days, either party may terminate the affected engagement without liability.</p>
 
           {/* ── 16 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
-            <FileText size={18} className="text-accent" /> 16. Amendments and Modifications
+            <Gavel size={18} className="text-accent" /> 16. Governing Law and Dispute Resolution
           </h3>
-          <p className="text-justify">Devionic reserves the right to modify, amend, or update these Terms at any time at its sole discretion. Any material changes shall be communicated by posting the revised Terms on the Devionic website with an updated "Last Updated" date. Continued use of the website or services after such changes constitute the Client's acceptance of the modified Terms. Devionic may also notify registered clients via email of significant changes. It is the Client's responsibility to periodically review these Terms for updates.</p>
+          <p className="text-justify">These Terms shall be governed by and construed in accordance with the laws of the Islamic Republic of Pakistan, without regard to its conflict of laws principles. Any disputes arising out of or related to these Terms shall first be attempted to be resolved through good-faith negotiation between the parties within 30 days of written notice. If negotiation fails, the dispute shall be submitted to mediation through a mutually agreed mediator. If mediation fails within 60 days, either party may pursue legal remedies through the appropriate courts of competent jurisdiction in District Layyah, Punjab, Pakistan. The Client agrees to submit to the jurisdiction of these courts for the resolution of any such disputes. Notwithstanding the foregoing, Devionic may seek injunctive or other equitable relief in any court of competent jurisdiction to protect its intellectual property or confidential information without the requirement to post a bond.</p>
 
           {/* ── 17 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
-            <Gavel size={18} className="text-accent" /> 17. Severability
+            <FileText size={18} className="text-accent" /> 17. Amendments and Modifications
           </h3>
-          <p className="text-justify">If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it valid and enforceable, and the remaining provisions shall continue in full force and effect without being impaired or invalidated in any way. The parties agree that any such invalid provision shall be replaced with a valid provision that most closely reflects the original intent of the parties.</p>
+          <p className="text-justify">Devionic reserves the right to modify, amend, or update these Terms at any time at its sole discretion. Any material changes shall be communicated by posting the revised Terms on the Devionic website with an updated "Last Updated" date. Continued use of the website or services after such changes constitute the Client's acceptance of the modified Terms. Devionic may also notify registered clients via email of significant changes. It is the Client's responsibility to periodically review these Terms for updates.</p>
 
           {/* ── 18 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
-            <Handshake size={18} className="text-accent" /> 18. Entire Agreement
+            <Gavel size={18} className="text-accent" /> 18. Severability
           </h3>
-          <p className="text-justify">These Terms, together with any applicable Statement of Work, project proposal, service agreement, or Non-Disclosure Agreement executed between the parties, constitute the entire agreement between the Client and Devionic with respect to the subject matter hereof and supersede all prior or contemporaneous negotiations, representations, warranties, understandings, and agreements, whether written or oral. In the event of any conflict between these Terms and an executed Statement of Work (SOW), project proposal, or service agreement, the terms of the SOW shall prevail with respect to the specific subject matter of the conflict. No waiver of any provision of these Terms shall be deemed a further or continuing waiver of that provision or any other provision.</p>
+          <p className="text-justify">If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it valid and enforceable, and the remaining provisions shall continue in full force and effect without being impaired or invalidated in any way. The parties agree that any such invalid provision shall be replaced with a valid provision that most closely reflects the original intent of the parties.</p>
 
           {/* ── 19 ── */}
           <h3 className="text-foreground font-semibold flex items-center gap-2">
-            <Mail size={18} className="text-accent" /> 19. Contact Information
+            <Handshake size={18} className="text-accent" /> 19. Entire Agreement
+          </h3>
+          <p className="text-justify">These Terms, together with any applicable Statement of Work, project proposal, service agreement, or Non-Disclosure Agreement executed between the parties, constitute the entire agreement between the Client and Devionic with respect to the subject matter hereof and supersede all prior or contemporaneous negotiations, representations, warranties, understandings, and agreements, whether written or oral. In the event of any conflict between these Terms and an executed Statement of Work (SOW), project proposal, or service agreement, the terms of the SOW shall prevail with respect to the specific subject matter of the conflict. No waiver of any provision of these Terms shall be deemed a further or continuing waiver of that provision or any other provision.</p>
+
+          {/* ── 20 ── */}
+          <h3 className="text-foreground font-semibold flex items-center gap-2">
+            <Mail size={18} className="text-accent" /> 20. Contact Information
           </h3>
           <p className="text-justify">For any questions, concerns, or clarifications regarding these Terms and Conditions, please contact us through any of the following channels:</p>
           <ul className="list-disc pl-5 space-y-1 text-sm">

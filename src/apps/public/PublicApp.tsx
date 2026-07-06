@@ -21,6 +21,7 @@ import Verification from "@/pages/Verification";
 import UserLogin from "@/pages/UserLogin";
 import UserSignUp from "@/pages/UserSignUp";
 import UserDashboard from "@/pages/UserDashboard";
+import HowItWorks from "@/pages/HowItWorks";
 import NotFound from "@/pages/NotFound";
 import MaintenancePage from "@/components/MaintenancePage";
 
@@ -63,6 +64,7 @@ const PublicApp = () => {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/resource-center" element={<ResourceCenter />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/careers/apply/:id" element={<JobApply />} />
