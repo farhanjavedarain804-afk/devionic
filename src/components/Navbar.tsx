@@ -34,7 +34,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Link to="/login">
+          <Link to="/portal/login">
             <Button variant="navCta" size="sm" className="ml-3">Client Portal</Button>
           </Link>
         </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/login" onClick={() => setIsOpen(false)} className="mt-2">
+            <Link to="/portal/login" onClick={() => setIsOpen(false)} className="mt-2">
               <Button variant="navCta" className="w-full">Client Portal</Button>
             </Link>
           </div>
