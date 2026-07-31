@@ -35,3 +35,25 @@ export const logout = () => {
   localStorage.removeItem("devionic_public_user");
   window.location.href = getAuthRedirectPath();
 };
+
+export const useAuth = () => {
+  return {
+    user: getCurrentUser(),
+    login: async (email: string, pass: string) => {
+      const res = await fetch("/api/portal/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "login", payload: { email, password: pass } })
+      });
+      if (!res.ok) throw new Error("Network response was not ok");
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      
+      saveClientSession(data.token, data.user);
+      return data;
+    },
+    logout: async () => {
+      logout();
+    }
+  };
+};
