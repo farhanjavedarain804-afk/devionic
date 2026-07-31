@@ -92,9 +92,9 @@ const PublicApp = () => {
         <Route path="/verify" element={<Verify />} />
 
         {/* Client Portal Routes */}
+        <Route path="/portal/login" element={<PortalLogin />} />
         <Route path="/portal" element={<PortalLayout />}>
           <Route index element={<PortalDashboard />} />
-          <Route path="login" element={<PortalLogin />} />
           <Route path="projects" element={<PortalProjects />} />
           <Route path="tickets" element={<PortalTickets />} />
           <Route path="invoices" element={<PortalInvoices />} />

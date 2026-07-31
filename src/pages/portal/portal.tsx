@@ -48,9 +48,6 @@ const NAV: NavItem[] = [
 const GROUP_ORDER = ["Overview", "Work", "Billing", "Catalog", "Account"];
 
 export default function PortalLayout() {
-  const pathname = useLocation().pathname;
-  const isPublic = pathname === "/portal/login";
-  if (isPublic) return <Outlet />;
   return (
     <RequirePortalAuth>
       <PortalShell />
