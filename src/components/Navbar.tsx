@@ -34,9 +34,9 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Link to="/login">
+          <a href="https://dms.devionic.com/portal/login" target="_blank" rel="noopener noreferrer">
             <Button variant="navCta" size="sm" className="ml-3">Client Portal</Button>
-          </Link>
+          </a>
         </div>
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-primary-foreground" aria-label="Toggle menu">
@@ -55,9 +55,9 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/login" onClick={() => setIsOpen(false)} className="mt-2">
+            <a href="https://dms.devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="mt-2" onClick={() => setIsOpen(false)}>
               <Button variant="navCta" className="w-full">Client Portal</Button>
-            </Link>
+            </a>
           </div>
         </div>
       )}

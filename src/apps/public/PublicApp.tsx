@@ -18,9 +18,6 @@ import InternshipApply from "@/pages/InternshipApply";
 import Complaint from "@/pages/Complaint";
 import Verify from "@/pages/Verify";
 import Verification from "@/pages/Verification";
-import UserLogin from "@/pages/UserLogin";
-import UserSignUp from "@/pages/UserSignUp";
-import UserDashboard from "@/pages/UserDashboard";
 import HowItWorks from "@/pages/HowItWorks";
 import NotFound from "@/pages/NotFound";
 import MaintenancePage from "@/components/MaintenancePage";
@@ -73,9 +70,6 @@ const PublicApp = () => {
         <Route path="/complaint" element={<Complaint />} />
         <Route path="/verification" element={<Verification />} />
         <Route path="/verify" element={<Verify />} />
-        <Route path="/login" element={<UserLogin />} />
-        <Route path="/signup" element={<UserSignUp />} />
-        <Route path="/dashboard/*" element={<UserDashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </MaintenanceGuard>
