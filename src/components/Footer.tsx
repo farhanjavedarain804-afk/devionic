@@ -4,7 +4,7 @@ import logo from "@/assets/devionic-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy-gradient text-primary-foreground">
+    <footer className="bg-navy-dark text-primary-foreground border-t border-white/5 pt-10">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-primary-foreground/40 text-sm">
             © {new Date().getFullYear()} Devionic (Private) Limited. All rights reserved.
           </p>

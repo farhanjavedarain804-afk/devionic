@@ -19,7 +19,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-dark/95 backdrop-blur-md border-b border-cyan/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-dark/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Devionic Logo" className="h-8 md:h-10 brightness-0 invert" />
@@ -48,12 +48,12 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-navy-dark/98 backdrop-blur-md border-t border-cyan/10 animate-fade-in">
-          <div className="flex flex-col px-4 py-4 gap-1">
+        <div className="md:hidden bg-navy-dark/95 backdrop-blur-xl border-t border-white/5 animate-fade-in shadow-2xl">
+          <div className="flex flex-col px-4 py-6 gap-2">
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)}
-                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
-                  location.pathname === link.path ? "text-cyan bg-cyan/10" : "text-primary-foreground/80 hover:text-cyan"
+                className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
+                  location.pathname === link.path ? "text-cyan bg-white/5" : "text-primary-foreground/70 hover:text-cyan hover:bg-white/5"
                 }`}>
                 {link.label}
               </Link>

@@ -146,11 +146,13 @@ const Index = () => {
              {services.map((service, i) => (
                <motion.div key={service.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                  <Link to="/services" className="block group h-full">
-                   <div className="bg-card rounded-xl p-6 h-full border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
-                     <service.icon size={28} className="text-accent mb-3 shrink-0" />
-                     <h3 className="font-semibold text-card-foreground text-sm mb-2">{service.title}</h3>
-                     <p className="text-muted-foreground text-xs leading-relaxed flex-1">{service.desc}</p>
-                   </div>
+                    <div className="bg-card rounded-2xl p-8 h-full border border-border/40 hover:border-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan/10 flex flex-col group-hover:-translate-y-2">
+                      <div className="w-12 h-12 rounded-xl bg-cyan/10 flex items-center justify-center mb-6">
+                        <service.icon size={24} className="text-cyan" />
+                      </div>
+                      <h3 className="font-semibold text-card-foreground text-lg mb-3">{service.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed flex-1">{service.desc}</p>
+                    </div>
                  </Link>
                </motion.div>
              ))}
@@ -168,12 +170,12 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUs.map((item, i) => (
               <motion.div key={item.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                className="text-center p-8 rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 backdrop-blur-sm">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
-                  <item.icon size={24} className="text-accent" />
+                className="text-center p-8 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-md hover:bg-white/[0.04] transition-colors">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-cyan/20 to-blue-500/20 flex items-center justify-center">
+                  <item.icon size={28} className="text-cyan" />
                 </div>
-                <h3 className="text-primary-foreground font-semibold mb-2">{item.title}</h3>
-                <p className="text-primary-foreground/60 text-sm">{item.desc}</p>
+                <h3 className="text-primary-foreground font-semibold text-lg mb-3">{item.title}</h3>
+                <p className="text-primary-foreground/60 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -187,11 +189,11 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {process.map((item, i) => (
               <motion.div key={item.step} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                className="flex gap-4 p-6 bg-card rounded-xl border border-border">
-                <span className="text-3xl font-bold text-accent/30 font-heading">{item.step}</span>
+                className="flex gap-6 p-8 bg-card rounded-2xl border border-border/40 hover:border-cyan/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <span className="text-5xl font-bold text-cyan/20 font-heading shrink-0">{item.step}</span>
                 <div>
-                  <h3 className="font-semibold text-card-foreground mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  <h3 className="font-semibold text-card-foreground text-lg mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

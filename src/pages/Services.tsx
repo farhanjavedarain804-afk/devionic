@@ -264,12 +264,12 @@ const Services = () => {
               { icon: TrendingUp, title: "Proven Results", desc: "Track record of successful deliveries" },
             ].map((item, i) => (
               <motion.div key={item.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUp}
-                className="p-6 bg-card rounded-xl border border-border text-center hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-accent/10 flex items-center justify-center">
-                  <item.icon size={22} className="text-accent" />
+                className="p-8 bg-card rounded-2xl border border-border/40 text-center hover:border-cyan/30 hover:shadow-xl hover:-translate-y-1 transition-all">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan/20 to-blue-500/20 flex items-center justify-center">
+                  <item.icon size={26} className="text-cyan" />
                 </div>
-                <h3 className="font-semibold text-card-foreground text-sm mb-1">{item.title}</h3>
-                <p className="text-muted-foreground text-xs">{item.desc}</p>
+                <h3 className="font-semibold text-card-foreground text-base mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -284,17 +284,17 @@ const Services = () => {
                 const IconComponent = iconMap[service.icon] || Code;
                 return (
                   <motion.div key={service.id} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUp}
-                    className="bg-card rounded-xl p-8 border border-border hover:border-accent/30 transition-all duration-300 group flex flex-col">
-                    <div className="flex items-start gap-4 flex-1">
-                      <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
-                        <IconComponent size={24} className="text-accent" />
+                    className="bg-card rounded-2xl p-8 border border-border/40 hover:border-cyan/40 transition-all duration-300 group flex flex-col hover:shadow-2xl hover:shadow-cyan/5 hover:-translate-y-1">
+                    <div className="flex items-start gap-5 flex-1">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan/10 to-transparent flex items-center justify-center shrink-0 group-hover:bg-cyan/20 transition-colors border border-cyan/10">
+                        <IconComponent size={28} className="text-cyan" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-bold text-card-foreground mb-2">{service.title}</h3>
-                        <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
+                        <h3 className="text-xl font-bold text-card-foreground mb-2 group-hover:text-cyan transition-colors">{service.title}</h3>
+                        <p className="text-muted-foreground text-sm mb-5 leading-relaxed">{service.description}</p>
                         <div className="flex flex-wrap gap-2 mb-4">
                           {(service.features || []).map((f: string) => (
-                            <span key={f} className="text-xs px-3 py-1 bg-secondary rounded-full text-secondary-foreground">{f}</span>
+                            <span key={f} className="text-xs px-3 py-1 bg-white/5 border border-white/10 rounded-full text-primary-foreground/70">{f}</span>
                           ))}
                         </div>
                         <Link to={`/services/${service.id}`} className="inline-flex items-center text-sm font-semibold text-accent hover:text-accent/80 transition-colors mt-2">

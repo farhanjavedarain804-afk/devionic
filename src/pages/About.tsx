@@ -56,22 +56,26 @@ const About = () => {
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }}
               variants={fadeUp} custom={0}
-              className="bg-card rounded-xl p-8 border border-border"
+              className="bg-card rounded-2xl p-10 border border-border/40 hover:border-cyan/30 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
-              <Eye size={32} className="text-accent mb-4" />
-              <h3 className="text-xl font-bold text-card-foreground mb-3">Our Vision</h3>
-              <p className="text-muted-foreground">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan/20 to-blue-500/20 flex items-center justify-center mb-6">
+                <Eye size={28} className="text-cyan" />
+              </div>
+              <h3 className="text-2xl font-bold text-card-foreground mb-4">Our Vision</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 To be the leading digital innovation partner for businesses worldwide, empowering growth through technology excellence.
               </p>
             </motion.div>
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }}
               variants={fadeUp} custom={1}
-              className="bg-card rounded-xl p-8 border border-border"
+              className="bg-card rounded-2xl p-10 border border-border/40 hover:border-cyan/30 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
-              <Target size={32} className="text-accent mb-4" />
-              <h3 className="text-xl font-bold text-card-foreground mb-3">Our Mission</h3>
-              <p className="text-muted-foreground">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan/20 to-blue-500/20 flex items-center justify-center mb-6">
+                <Target size={28} className="text-cyan" />
+              </div>
+              <h3 className="text-2xl font-bold text-card-foreground mb-4">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 To deliver innovative, reliable, and affordable digital solutions that help businesses thrive in an ever-evolving technological landscape.
               </p>
             </motion.div>
@@ -88,13 +92,13 @@ const About = () => {
               <motion.div
                 key={v.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }}
                 variants={fadeUp}
-                className="text-center p-6 rounded-xl border border-border bg-card"
+                className="text-center p-8 rounded-2xl border border-border/40 bg-card hover:border-cyan/30 transition-all hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-accent/10 flex items-center justify-center">
-                  <v.icon size={22} className="text-accent" />
+                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-cyan/20 to-blue-500/20 flex items-center justify-center">
+                  <v.icon size={28} className="text-cyan" />
                 </div>
-                <h3 className="font-semibold text-card-foreground mb-1">{v.title}</h3>
-                <p className="text-muted-foreground text-sm">{v.desc}</p>
+                <h3 className="font-semibold text-card-foreground text-lg mb-2">{v.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </div>
