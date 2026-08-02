@@ -37,20 +37,20 @@ const Navbar = () => {
           <div className="group relative ml-3">
             <button className="flex items-center gap-2 rounded-xl border border-primary/25 bg-white/[0.04] px-5 py-2.5 text-sm font-semibold text-foreground backdrop-blur transition hover:border-primary/50 hover:bg-primary/10">
               <span className="flex items-center gap-2">
-                <LogIn className="h-4 w-4 text-cyan" />
+                <LogIn className="h-4 w-4 text-primary" />
                 Sign In
               </span>
               <span className="h-4 w-px bg-primary/25" aria-hidden />
               <span>Sign Up</span>
-              <ArrowRight className="h-3.5 w-3.5 text-cyan transition-transform group-hover:translate-x-0.5" />
+              <ArrowRight className="h-3.5 w-3.5 text-primary transition-transform group-hover:translate-x-0.5" />
             </button>
             <div className="pointer-events-none absolute top-full right-0 mt-2 w-52 translate-y-2 rounded-xl border border-primary/20 bg-[#0b1221]/95 p-2 opacity-0 shadow-2xl shadow-primary/10 backdrop-blur transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
-              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/10 hover:text-cyan">
-                <LogIn className="h-4 w-4 text-cyan" />
+              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/10 hover:text-primary">
+                <LogIn className="h-4 w-4 text-primary" />
                 Sign In
               </a>
-              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/10 hover:text-cyan">
-                <UserPlus className="h-4 w-4 text-cyan" />
+              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/10 hover:text-primary">
+                <UserPlus className="h-4 w-4 text-primary" />
                 Create Account
               </a>
             </div>
@@ -75,11 +75,11 @@ const Navbar = () => {
             ))}
             <div className="flex flex-col gap-2 mt-2">
               <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="flex items-center gap-2 rounded-xl border border-primary/25 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:border-primary/50 hover:bg-primary/10 justify-center">
-                <LogIn className="h-4 w-4 text-cyan" />
+                <LogIn className="h-4 w-4 text-primary" />
                 Sign In
               </a>
               <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="flex items-center gap-2 rounded-xl border border-primary/25 bg-primary/10 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:border-primary/50 justify-center">
-                <UserPlus className="h-4 w-4 text-cyan" />
+                <UserPlus className="h-4 w-4 text-primary" />
                 Create Account
               </a>
             </div>
