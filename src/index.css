@@ -6,6 +6,9 @@
 
 @layer base {
   :root {
+    --gradient-hero: radial-gradient(ellipse at 70% 40%, oklch(0.28 0.09 200 / 0.55), transparent 60%),
+                     radial-gradient(ellipse at 20% 80%, oklch(0.22 0.08 230 / 0.5), transparent 55%),
+                     linear-gradient(180deg, oklch(0.13 0.035 240), oklch(0.18 0.05 235));
     --background: 210 25% 97%;
     --foreground: 207 74% 12%;
 
