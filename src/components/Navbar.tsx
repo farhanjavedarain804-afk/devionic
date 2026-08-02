@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/devionic-logo.png";
 
@@ -35,7 +35,10 @@ const Navbar = () => {
             </Link>
           ))}
           <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer">
-            <Button variant="navCta" size="sm" className="ml-3">Signin/signup</Button>
+            <Button className="ml-3 bg-gradient-to-r from-cyan to-blue-500 text-white shadow-lg shadow-cyan/30 border-0 rounded-full px-6 py-2 h-auto font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-cyan/50">
+              <LogIn className="w-4 h-4 mr-2" />
+              Sign In / Sign Up
+            </Button>
           </a>
         </div>
 
@@ -56,7 +59,10 @@ const Navbar = () => {
               </Link>
             ))}
             <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="mt-2">
-              <Button variant="navCta" className="w-full">Signin/signup</Button>
+              <Button className="w-full bg-gradient-to-r from-cyan to-blue-500 text-white shadow-lg shadow-cyan/30 border-0 rounded-full py-3 h-auto font-bold tracking-wide transition-all duration-300 hover:shadow-cyan/50">
+                <LogIn className="w-4 h-4 mr-2" />
+                Sign In / Sign Up
+              </Button>
             </a>
           </div>
         </div>
