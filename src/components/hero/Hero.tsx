@@ -45,6 +45,9 @@ export function Hero() {
 
 
 
+      {/* Spacer for fixed Navbar to maintain exact original layout heights */}
+      <div className="h-[76px] lg:h-[80px] w-full" aria-hidden />
+
       {/* Main content */}
       <div className="relative z-10 mx-auto grid max-w-[1400px] items-center gap-10 px-6 pb-16 pt-12 lg:grid-cols-[1.05fr_1fr] lg:gap-6 lg:px-10 lg:pt-20">
         {/* Left copy */}
