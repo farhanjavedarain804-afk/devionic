@@ -35,7 +35,7 @@ const Navbar = () => {
             </Link>
           ))}
           <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer">
-            <Button variant="navCta" size="sm" className="ml-3">Client Portal</Button>
+            <Button variant="navCta" size="sm" className="ml-3">Signin/signup</Button>
           </a>
         </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
               </Link>
             ))}
             <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="mt-2">
-              <Button variant="navCta" className="w-full">Client Portal</Button>
+              <Button variant="navCta" className="w-full">Signin/signup</Button>
             </a>
           </div>
         </div>
