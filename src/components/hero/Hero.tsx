@@ -24,7 +24,7 @@ const stats = [
 export function Hero() {
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden dark bg-background text-foreground"
       style={{ background: "var(--gradient-hero)" }}
     >
       {/* Animated grid + particles */}
