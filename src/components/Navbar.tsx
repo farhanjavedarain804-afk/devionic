@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-10">
+      <div className="mx-auto flex w-full items-center justify-between px-6 py-5 lg:px-10">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Devionic Logo" className="h-8 md:h-10" />
         </Link>
