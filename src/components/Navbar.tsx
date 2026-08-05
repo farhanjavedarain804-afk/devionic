@@ -29,7 +29,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <Link key={link.path} to={link.path}
               className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                location.pathname === link.path ? "text-cyan" : "text-primary-foreground/80 hover:text-cyan"
+                location.pathname === link.path ? "text-cyan" : "text-foreground/80 hover:text-cyan"
               }`}>
               {link.label}
             </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-primary-foreground" aria-label="Toggle menu">
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground" aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
