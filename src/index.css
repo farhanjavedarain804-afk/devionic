@@ -9,35 +9,35 @@
     --gradient-hero: radial-gradient(ellipse at 70% 40%, oklch(0.28 0.09 200 / 0.55), transparent 60%),
                      radial-gradient(ellipse at 20% 80%, oklch(0.22 0.08 230 / 0.5), transparent 55%),
                      linear-gradient(180deg, oklch(0.13 0.035 240), oklch(0.18 0.05 235));
-    --background: 210 25% 97%;
-    --foreground: 207 74% 12%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 207 74% 12%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 207 74% 12%;
+    --popover-foreground: 222 47% 11%;
 
     --primary: 207 74% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 93%;
-    --secondary-foreground: 207 74% 15%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 15% 92%;
-    --muted-foreground: 207 20% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 174 100% 40%;
-    --accent-foreground: 207 74% 12%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: 174 100% 40%;
 
-    --radius: 0.625rem;
+    --radius: 0.75rem;
 
     /* Custom tokens */
     --cyan: 174 100% 40%;
@@ -96,6 +96,25 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(174,100%,40%)] to-[hsl(190,100%,50%)];
+  }
+
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-[var(--gradient-text)];
+  }
+
+  /* Minimalist UI Enhancements */
+  .shadow-soft {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  }
+  .shadow-hover {
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+  }
+  .glass-card {
+    @apply bg-white border border-slate-100 shadow-soft transition-all duration-300 hover:shadow-hover hover:-translate-y-1 rounded-xl;
+  }
+  
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-lg border-b border-slate-100/50;
   }
 
   .bg-navy-gradient {

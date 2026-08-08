@@ -145,10 +145,10 @@ const Index = () => {
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
              {services.map((service, i) => (
                <motion.div key={service.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
-                 <Link to="/services" className="block group h-full">
-                    <div className="bg-card rounded-2xl p-8 h-full border border-border/40 hover:border-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan/10 flex flex-col group-hover:-translate-y-2">
-                      <div className="w-12 h-12 rounded-xl bg-cyan/10 flex items-center justify-center mb-6">
-                        <service.icon size={24} className="text-cyan" />
+                  <Link to="/services" className="block group h-full">
+                     <div className="glass-card p-8 h-full flex flex-col group-hover:border-cyan/30">
+                       <div className="w-12 h-12 rounded-xl bg-cyan/10 flex items-center justify-center mb-6 transition-transform group-hover:scale-110 duration-300">
+                         <service.icon size={24} className="text-cyan" />
                       </div>
                       <h3 className="font-semibold text-card-foreground text-lg mb-3">{service.title}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed flex-1">{service.desc}</p>
@@ -189,8 +189,8 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {process.map((item, i) => (
               <motion.div key={item.step} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                className="flex gap-6 p-8 bg-card rounded-2xl border border-border/40 hover:border-cyan/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <span className="text-5xl font-bold text-cyan/20 font-heading shrink-0">{item.step}</span>
+                className="flex gap-6 p-8 glass-card hover:border-cyan/30 group">
+                <span className="text-5xl font-bold text-slate-100 group-hover:text-cyan/10 transition-colors duration-300 font-heading shrink-0">{item.step}</span>
                 <div>
                   <h3 className="font-semibold text-card-foreground text-lg mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
