@@ -44,12 +44,12 @@ const Navbar = () => {
               <span>Sign Up</span>
               <ArrowRight className="h-3.5 w-3.5 text-primary transition-transform group-hover:translate-x-0.5" />
             </button>
-            <div className="pointer-events-none absolute top-full right-0 mt-2 w-52 translate-y-2 rounded-xl border border-slate-100 bg-white/95 p-2 opacity-0 shadow-hover backdrop-blur transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
-              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-slate-50 hover:text-primary">
+            <div className="pointer-events-none absolute top-full right-0 mt-2 w-52 translate-y-2 rounded-xl border border-primary/20 bg-[#0b1221]/95 p-2 opacity-0 shadow-2xl shadow-primary/10 backdrop-blur transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/10 hover:text-primary">
                 <LogIn className="h-4 w-4 text-primary" />
                 Sign In
               </a>
-              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-slate-50 hover:text-primary">
+              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/10 hover:text-primary">
                 <UserPlus className="h-4 w-4 text-primary" />
                 Create Account
               </a>
@@ -63,22 +63,22 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 animate-fade-in shadow-hover">
+        <div className="md:hidden bg-navy-dark/95 backdrop-blur-xl border-t border-white/5 animate-fade-in shadow-2xl">
           <div className="flex flex-col px-4 py-6 gap-2">
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)}
                 className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
-                  location.pathname === link.path ? "text-primary bg-slate-50" : "text-foreground/80 hover:text-primary hover:bg-slate-50"
+                  location.pathname === link.path ? "text-cyan bg-white/5" : "text-primary-foreground/70 hover:text-cyan hover:bg-white/5"
                 }`}>
                 {link.label}
               </Link>
             ))}
             <div className="flex flex-col gap-2 mt-2">
-              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-foreground transition hover:border-primary/50 hover:bg-slate-50 justify-center">
+              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="flex items-center gap-2 rounded-xl border border-primary/25 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:border-primary/50 hover:bg-primary/10 justify-center">
                 <LogIn className="h-4 w-4 text-primary" />
                 Sign In
               </a>
-              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="flex items-center gap-2 rounded-xl border border-primary/20 bg-primary/5 px-5 py-3 text-sm font-semibold text-foreground transition hover:border-primary/50 justify-center">
+              <a href="https://devionic.com/portal/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="flex items-center gap-2 rounded-xl border border-primary/25 bg-primary/10 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:border-primary/50 justify-center">
                 <UserPlus className="h-4 w-4 text-primary" />
                 Create Account
               </a>
