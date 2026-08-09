@@ -1,5 +1,5 @@
 import { Calendar, MessageCircle, Code2, Smartphone, Cloud, TrendingUp, Shield, Brain, Users, Briefcase, Trophy, Menu, ArrowRight, LogIn, UserPlus } from "lucide-react";
-
+import { ParticleField } from "./ParticleField";
 import { WireframeGlobe } from "./WireframeGlobe";
 import { WelcomeRobot } from "./WelcomeRobot";
 
@@ -27,7 +27,7 @@ export function Hero() {
       className="relative overflow-hidden dark bg-background text-foreground min-h-[100dvh] flex flex-col justify-center"
       style={{ background: "var(--gradient-hero)" }}
     >
-
+      <ParticleField />
       {/* Ambient glow orbs */}
       <div
         className="pointer-events-none absolute -top-40 -right-32 h-[500px] w-[500px] rounded-full blur-3xl animate-pulse-glow"
