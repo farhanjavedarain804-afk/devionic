@@ -80,8 +80,8 @@ const BlogDetail = () => {
               <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Share this article</p>
             </div>
             <div className="flex gap-4">
-              <Button variant="outline" size="sm" onClick={() => window.open(\`https://twitter.com/intent/tweet?url=\${window.location.href}&text=\${post.title}\`, '_blank')}>Twitter</Button>
-              <Button variant="outline" size="sm" onClick={() => window.open(\`https://www.linkedin.com/shareArticle?mini=true&url=\${window.location.href}&title=\${post.title}\`, '_blank')}>LinkedIn</Button>
+              <Button variant="outline" size="sm" onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${post.title}`, '_blank')}>Twitter</Button>
+              <Button variant="outline" size="sm" onClick={() => window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}&title=${post.title}`, '_blank')}>LinkedIn</Button>
             </div>
           </div>
         </ContentContainer>
