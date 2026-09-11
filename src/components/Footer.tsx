@@ -6,62 +6,29 @@ const Footer = () => {
   return (
     <footer className="bg-navy-dark text-primary-foreground border-t border-white/5 pt-10">
       <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
           {/* Brand */}
-          <div className="space-y-4">
-            <img src={logo} alt="Devionic" className="h-8 brightness-0 invert" />
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+          <div className="space-y-6">
+            <img src={logo} alt="Devionic" className="h-10 brightness-0 invert" />
+            <p className="text-primary-foreground/70 text-base leading-relaxed max-w-sm">
               Inspiring Innovation Digitally. Your trusted partner in technology innovation and growth.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-cyan font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
-            <div className="flex flex-col gap-2">
-              {[
-                { label: "Home", path: "/" },
-                { label: "About Us", path: "/about" },
-                { label: "Services", path: "/services" },
-                { label: "Careers", path: "/careers" },
-                { label: "Contact", path: "/contact" },
-                { label: "Complaint & Ticket", path: "/complaint" },
-                { label: "Verification", path: "/verification" },
-                { label: "Resource Center", path: "/resource-center" },
-              ].map((link) => (
-                <Link key={link.path} to={link.path} className="text-primary-foreground/60 hover:text-cyan text-sm transition-colors">
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-cyan font-semibold mb-4 text-sm uppercase tracking-wider">Services</h4>
-            <div className="flex flex-col gap-2">
-              {["Web Development", "App Development", "UI/UX Design", "AI Automation", "Digital Marketing", "Cyber Security"].map((s) => (
-                <Link key={s} to="/services" className="text-primary-foreground/60 hover:text-cyan text-sm transition-colors">
-                  {s}
-                </Link>
-              ))}
-            </div>
-          </div>
-
           {/* Contact */}
-          <div>
-            <h4 className="text-cyan font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
-            <div className="flex flex-col gap-3 text-sm text-primary-foreground/60">
-              <div className="flex items-start gap-2">
-                <MapPin size={16} className="mt-0.5 text-cyan shrink-0" />
-                <span>Head Office-Devionic Multan Road Chowk Azam, Tehsil & District Layyah, Punjab, Pakistan Postal Code 31450</span>
+          <div className="md:ml-auto">
+            <h4 className="text-cyan font-semibold mb-6 text-sm uppercase tracking-wider">Contact Us</h4>
+            <div className="flex flex-col gap-5 text-base text-primary-foreground/70">
+              <div className="flex items-start gap-3 max-w-sm">
+                <MapPin size={20} className="mt-1 text-cyan shrink-0" />
+                <span className="leading-relaxed">Head Office-Devionic Multan Road Chowk Azam, Tehsil & District Layyah, Punjab, Pakistan Postal Code 31450</span>
               </div>
-              <a href="tel:+923177121841" className="flex items-center gap-2 hover:text-cyan transition-colors">
-                <Phone size={16} className="text-cyan" />
+              <a href="tel:+923177121841" className="flex items-center gap-3 hover:text-cyan transition-colors">
+                <Phone size={20} className="text-cyan" />
                 +92-317-7121841
               </a>
-              <a href="mailto:info@devionic.com" className="flex items-center gap-2 hover:text-cyan transition-colors">
-                <Mail size={16} className="text-cyan" />
+              <a href="mailto:info@devionic.com" className="flex items-center gap-3 hover:text-cyan transition-colors">
+                <Mail size={20} className="text-cyan" />
                 info@devionic.com
               </a>
             </div>
@@ -72,11 +39,12 @@ const Footer = () => {
           <p className="text-primary-foreground/40 text-sm">
             © {new Date().getFullYear()} Devionic (Private) Limited. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
             <Link to="/privacy" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Terms & Conditions</Link>
             <Link to="/disclaimer" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Disclaimer</Link>
             <Link to="/complaint" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Complaint & Ticket</Link>
+            <Link to="/verification" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Verification</Link>
             <Link to="/resource-center" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Resource Center</Link>
           </div>
         </div>
