@@ -41,6 +41,13 @@ export function WelcomeRobot() {
             });
             setTimeout(() => ctx.close(), 1200);
           }
+          
+          if ('speechSynthesis' in window) {
+            const msg = new SpeechSynthesisUtterance("Welcome to devionic dot com");
+            msg.pitch = 1.3;
+            msg.rate = 1.0;
+            window.speechSynthesis.speak(msg);
+          }
         } catch {
           // Audio autoplay blocked or unsupported — silently ignore
         }

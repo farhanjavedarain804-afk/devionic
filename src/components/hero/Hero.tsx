@@ -1,4 +1,4 @@
-import { Calendar, MessageCircle, Code2, Smartphone, Cloud, TrendingUp, Shield, Brain, Users, Briefcase, Trophy, Menu, ArrowRight, LogIn, UserPlus } from "lucide-react";
+import { Calendar, MessageCircle, Code2, Smartphone, Cloud, TrendingUp, Shield, Brain, Users, Briefcase, Trophy, Menu, ArrowRight, LogIn, UserPlus, Mouse, ChevronDown } from "lucide-react";
 import { ParticleField } from "./ParticleField";
 import { WireframeGlobe } from "./WireframeGlobe";
 import { WelcomeRobot } from "./WelcomeRobot";
@@ -161,6 +161,12 @@ export function Hero() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Mouse Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 opacity-80 animate-fade-up" style={{ animationDelay: "1s" }}>
+        <Mouse className="h-6 w-6 animate-float-slow text-primary" strokeWidth={1.5} />
+        <ChevronDown className="h-4 w-4 animate-bounce text-primary" strokeWidth={2} />
       </div>
 
       {/* Welcome robot popup */}
