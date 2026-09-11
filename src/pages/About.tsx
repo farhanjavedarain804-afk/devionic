@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import PageHero from "@/components/PageHero";
 import SEO from "@/components/SEO";
 import ContentContainer from "@/components/ContentContainer";
+import ceoImage from "@/assets/ceo.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -45,6 +46,41 @@ const About = () => {
             <p>
               Founded with a vision to empower businesses through technology and contribute to Pakistan's digital advancement, Devionic has established itself as a trusted technology partner across diverse industries. Our commitment to quality, innovation, and continuous improvement enables us to deliver exceptional results that not only meet business objectives but create lasting value and competitive advantage for our clients.
             </p>
+          </div>
+        </ContentContainer>
+      </section>
+
+      {/* CEO Message */}
+      <section className="py-20 bg-background">
+        <ContentContainer variant="default">
+          <div className="bg-card border border-border/40 rounded-3xl overflow-hidden shadow-2xl hover:shadow-cyan/10 transition-shadow duration-500">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 items-stretch">
+              <div className="lg:col-span-2 relative min-h-[400px] md:min-h-[500px]">
+                <img 
+                  src={ceoImage} 
+                  alt="Ch Farhan Javed Arain - CEO Devionic" 
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
+              </div>
+              <div className="lg:col-span-3 p-10 md:p-14 lg:p-20 flex flex-col justify-center">
+                <SectionHeading subtitle="Leadership" title="Message from the CEO" className="mb-8" />
+                <div className="prose prose-lg text-muted-foreground space-y-5 mb-12">
+                  <p className="italic">
+                    "At Devionic, we don't just write code—we engineer digital solutions that empower businesses to thrive. Our journey began with a simple but powerful vision: to bridge the gap between complex technology and everyday business challenges, delivering innovation that is both accessible and transformative."
+                  </p>
+                  <p className="italic">
+                    "We are immensely proud of the exceptional team we have built and the partnerships we have cultivated worldwide. Your trust is the foundation of our success, and we remain steadfast in our commitment to transparency, quality, and relentless innovation."
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-3xl font-bold text-foreground mb-1" style={{ fontFamily: "'Brush Script MT', 'Great Vibes', cursive, serif", letterSpacing: "1px" }}>
+                    Ch Farhan Javed Arain
+                  </h4>
+                  <p className="text-sm text-cyan font-semibold uppercase tracking-wider">Founder & CEO, Devionic</p>
+                </div>
+              </div>
+            </div>
           </div>
         </ContentContainer>
       </section>
