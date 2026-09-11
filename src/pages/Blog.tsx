@@ -6,6 +6,7 @@ import SEO from "@/components/SEO";
 import PageHero from "@/components/PageHero";
 import ContentContainer from "@/components/ContentContainer";
 import { Button } from "@/components/ui/button";
+import { blogPosts } from "@/data/blogPosts";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -14,36 +15,6 @@ const fadeUp = {
     transition: { delay: i * 0.1, duration: 0.5 },
   }),
 };
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "The Future of AI in Enterprise Software",
-    excerpt: "Discover how artificial intelligence is transforming the way businesses operate, from automated workflows to intelligent data analytics.",
-    category: "Technology",
-    date: "Sep 10, 2026",
-    author: "Devionic Team",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 2,
-    title: "5 Essential Cyber Security Best Practices for 2026",
-    excerpt: "Protect your business from emerging digital threats with these fundamental cybersecurity strategies that every organization must implement.",
-    category: "Security",
-    date: "Aug 28, 2026",
-    author: "Security Team",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 3,
-    title: "Why Your Business Needs a Custom Web Application",
-    excerpt: "Off-the-shelf software might not be enough. Learn how custom web development can streamline your unique business processes.",
-    category: "Development",
-    date: "Aug 15, 2026",
-    author: "Development Team",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-  },
-];
 
 const Blog = () => {
   return (
@@ -106,16 +77,14 @@ const Blog = () => {
                     {post.excerpt}
                   </p>
                   
-                  <Button variant="outline" className="w-full mt-auto group-hover:bg-cyan group-hover:text-navy-dark group-hover:border-cyan transition-colors">
-                    Read Article <ArrowRight size={16} className="ml-2" />
-                  </Button>
+                  <Link to={`/blog/${post.slug}`} className="w-full mt-auto">
+                    <Button variant="outline" className="w-full group-hover:bg-cyan group-hover:text-navy-dark group-hover:border-cyan transition-colors">
+                      Read Article <ArrowRight size={16} className="ml-2" />
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Button variant="cyan" size="lg">Load More Articles</Button>
           </div>
         </ContentContainer>
       </section>
