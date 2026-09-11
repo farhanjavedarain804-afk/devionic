@@ -6,12 +6,12 @@ import { WelcomeRobot } from "./WelcomeRobot";
 const nav = ["Home", "About", "Services", "Careers", "Contact", "Complaint & Ticket", "Verification"];
 
 const orbitCards = [
-  { icon: Code2, label: "Web Development", pos: "top-[0%] left-[18%]", delay: "0s" },
-  { icon: Smartphone, label: "Mobile Apps", pos: "top-[0%] right-[18%]", delay: "0.5s" },
-  { icon: Shield, label: "Cyber Security", pos: "top-[38%] -right-[2%]", delay: "1s" },
-  { icon: Cloud, label: "Cloud Solutions", pos: "bottom-[18%] right-[12%]", delay: "1.5s" },
-  { icon: TrendingUp, label: "Digital Transformation", pos: "bottom-[18%] left-[12%]", delay: "2s" },
-  { icon: Brain, label: "AI & Automation", pos: "top-[38%] -left-[2%]", delay: "2.5s" },
+  { icon: Code2, label: "Web Development", pos: "top-[8%] -left-[6%]", delay: "0s" },
+  { icon: Smartphone, label: "Mobile Apps", pos: "top-[8%] -right-[6%]", delay: "0.5s" },
+  { icon: Shield, label: "Cyber Security", pos: "top-[44%] -right-[12%]", delay: "1s" },
+  { icon: Cloud, label: "Cloud Solutions", pos: "bottom-[12%] -right-[2%]", delay: "1.5s" },
+  { icon: TrendingUp, label: "Digital Transformation", pos: "bottom-[12%] -left-[2%]", delay: "2s" },
+  { icon: Brain, label: "AI & Automation", pos: "top-[44%] -left-[12%]", delay: "2.5s" },
 ];
 
 const stats = [
