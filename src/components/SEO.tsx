@@ -4,48 +4,127 @@ interface SEOProps {
   title: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
+  jsonLd?: object;
 }
 
-/**
- * SEO Component
- * Dynamically updates document title and meta tags for better search engine optimization.
- */
-const SEO = ({ title, description, canonical }: SEOProps) => {
+const BASE_TITLE = "Devionic (Private) Limited";
+const BASE_URL = "https://devionic.com";
+const DEFAULT_OG_IMAGE = "https://devionic.com/og-cover.png";
+
+const ORG_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "name": "Devionic (Private) Limited",
+  "alternateName": "Devionic",
+  "url": "https://devionic.com",
+  "logo": "https://devionic.com/devionic-logo.png",
+  "image": DEFAULT_OG_IMAGE,
+  "description": "Premier IT services company delivering software development, AI automation, mobile apps, and digital transformation solutions.",
+  "foundingDate": "2022",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Chowk Azam",
+    "addressLocality": "Layyah",
+    "addressRegion": "Punjab",
+    "postalCode": "31200",
+    "addressCountry": "PK"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+92-317-7121841",
+    "contactType": "customer service",
+    "availableLanguage": ["English", "Urdu"]
+  }],
+  "email": "info@devionic.com",
+  "telephone": "+92-317-7121841",
+  "sameAs": [
+    "https://www.facebook.com/devionic",
+    "https://www.linkedin.com/company/devionic",
+    "https://twitter.com/devionic",
+    "https://www.instagram.com/devionic"
+  ],
+  "areaServed": "Worldwide",
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00"
+};
+
+const setMeta = (attr: string, key: string, value: string) => {
+  let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", value);
+};
+
+const setLink = (rel: string, href: string) => {
+  let el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", rel);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("href", href);
+};
+
+const injectJsonLd = (id: string, data: object) => {
+  let el = document.getElementById(id) as HTMLScriptElement | null;
+  if (!el) {
+    el = document.createElement("script");
+    el.setAttribute("type", "application/ld+json");
+    el.id = id;
+    document.head.appendChild(el);
+  }
+  el.textContent = JSON.stringify(data);
+};
+
+const SEO = ({ title, description, canonical, ogImage, jsonLd }: SEOProps) => {
   useEffect(() => {
-    // 1. Update Document Title
-    const baseTitle = "Devionic (Private) Limited";
-    const fullTitle = `${title} | ${baseTitle}`;
+    const fullTitle = `${title} | ${BASE_TITLE}`;
+    const desc = description || "Devionic (Private) Limited provides premier software development, mobile apps, AI automation and digital transformation services globally.";
+    const canonicalUrl = canonical ? (canonical.startsWith("http") ? canonical : `${BASE_URL}${canonical}`) : BASE_URL;
+    const image = ogImage || DEFAULT_OG_IMAGE;
+
+    // Title
     document.title = fullTitle;
 
-    // 2. Update Meta Description
-    if (description) {
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', description);
-    }
+    // Standard meta
+    setMeta("name", "description", desc);
+    setMeta("name", "robots", "index, follow");
+    setMeta("name", "author", BASE_TITLE);
 
-    // 3. Update Canonical Tag
-    if (canonical) {
-      let linkCanonical = document.querySelector('link[rel="canonical"]');
-      if (!linkCanonical) {
-        linkCanonical = document.createElement('link');
-        linkCanonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(linkCanonical);
-      }
-      linkCanonical.setAttribute('href', canonical.startsWith('http') ? canonical : `https://devionic.com${canonical}`);
-    }
+    // Canonical
+    setLink("canonical", canonicalUrl);
 
-    // 4. Update OG:Title
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute('content', fullTitle);
+    // Open Graph
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:site_name", BASE_TITLE);
+    setMeta("property", "og:title", fullTitle);
+    setMeta("property", "og:description", desc);
+    setMeta("property", "og:url", canonicalUrl);
+    setMeta("property", "og:image", image);
+    setMeta("property", "og:image:width", "1200");
+    setMeta("property", "og:image:height", "630");
+    setMeta("property", "og:locale", "en_US");
 
-  }, [title, description, canonical]);
+    // Twitter Card
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:site", "@devionic");
+    setMeta("name", "twitter:title", fullTitle);
+    setMeta("name", "twitter:description", desc);
+    setMeta("name", "twitter:image", image);
 
-  return null; // This component doesn't render any visible UI
+    // JSON-LD: Organization (always present)
+    injectJsonLd("jsonld-org", ORG_JSON_LD);
+
+    // JSON-LD: Page-specific
+    if (jsonLd) injectJsonLd("jsonld-page", jsonLd);
+
+  }, [title, description, canonical, ogImage, jsonLd]);
+
+  return null;
 };
 
 export default SEO;
