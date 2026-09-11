@@ -8,10 +8,9 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
+  { label: "How We Work", path: "/how-it-works" },
   { label: "Careers", path: "/careers" },
   { label: "Contact", path: "/contact" },
-  { label: "Complaint & Ticket", path: "/complaint" },
-  { label: "Verification", path: "/verification" },
 ];
 
 const Navbar = () => {
@@ -28,7 +27,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isSolid = isScrolled || isHovered || isOpen;
+  const isSolid = isScrolled || isHovered || isOpen || location.pathname !== '/';
 
   return (
     <nav 

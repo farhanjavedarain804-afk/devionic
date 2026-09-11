@@ -28,7 +28,7 @@ const Footer = () => {
                 { label: "Complaint & Ticket", path: "/complaint" },
                 { label: "Verification", path: "/verification" },
                 { label: "Resource Center", path: "/resource-center" },
-                { label: "How It Works", path: "/how-it-works" },
+                { label: "How We Work", path: "/how-it-works" },
               ].map((link) => (
                 <Link key={link.path} to={link.path} className="text-primary-foreground/60 hover:text-cyan text-sm transition-colors">
                   {link.label}
@@ -77,7 +77,7 @@ const Footer = () => {
             <Link to="/privacy" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Terms & Conditions</Link>
             <Link to="/disclaimer" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Disclaimer</Link>
-            <Link to="/how-it-works" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">How It Works</Link>
+            <Link to="/how-it-works" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">How We Work</Link>
             <Link to="/resource-center" className="text-primary-foreground/40 hover:text-cyan text-sm transition-colors">Resource Center</Link>
           </div>
         </div>
