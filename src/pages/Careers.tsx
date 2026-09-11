@@ -210,16 +210,16 @@ const Careers = () => {
       </section>
 
       {/* General Application + Internship CTA */}
-      <section className="py-20 bg-navy-gradient">
+      <section className="py-20 bg-white">
         <ContentContainer variant="default" className="text-center">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Don't See Your Role? <span className="text-accent">Reach Out Anyway</span>
             </h2>
-            <p className="text-primary-foreground/60 mb-8 max-w-xl mx-auto">We're always looking for talented individuals. Send your resume to info@devionic.com</p>
+            <p className="text-foreground/70 mb-8 max-w-xl mx-auto">We're always looking for talented individuals. Send your resume to info@devionic.com</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link to="/careers/apply/general"><Button variant="hero" size="xl">Submit General Application</Button></Link>
-              <Link to="/careers/internship-apply/general"><Button variant="outline" size="xl" className="bg-white/10 border-white/20 text-primary-foreground hover:bg-white/20"><GraduationCap size={18} /> Apply for Internship</Button></Link>
+              <Link to="/careers/apply/general"><Button variant="cyan" size="xl">Submit General Application</Button></Link>
+              <Link to="/careers/internship-apply/general"><Button variant="outline" size="xl" className="border-border text-foreground hover:bg-secondary"><GraduationCap size={18} className="mr-2" /> Apply for Internship</Button></Link>
             </div>
           </motion.div>
         </ContentContainer>

@@ -534,24 +534,31 @@ const ServiceDetail = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-accent/5">
+      <section className="py-16 bg-white border-t border-border mt-10">
         <ContentContainer variant="default" className="text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
-            <p className="text-lg text-muted-foreground mb-10">
-              Let's discuss how our <strong className="text-foreground">{service.title}</strong> expertise can help you achieve your goals.
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Ready to start your <span className="text-accent">{service.title}</span> project?
+            </h2>
+            <p className="text-foreground/70 mb-8 max-w-xl mx-auto">
+              Contact us today to discuss your requirements and see how Devionic can help you achieve your goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <Link to="/contact">
+                <Button variant="cyan" size="lg" className="w-full sm:w-auto">
+                  Get a Free Quote
+                </Button>
+              </Link>
+              <a 
                 href={`https://wa.me/923177121841?text=${encodeURIComponent(`Hi, I'm interested in your ${service.title} service.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="cyan" size="lg" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto border-border text-foreground hover:bg-secondary">
                   <Headphones className="mr-2" size={18} /> Discuss on WhatsApp
                 </Button>
               </a>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto" onClick={() => navigate("/services")}>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-border text-foreground hover:bg-secondary" onClick={() => navigate("/services")}>
                 View All Services <ArrowRight className="ml-2" size={18} />
               </Button>
             </div>

@@ -303,16 +303,16 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-navy-gradient">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Let's Build Something <span className="text-accent">Great Together</span>
             </h2>
-            <p className="text-primary-foreground/60 mb-8 max-w-xl mx-auto">Ready to take your business to the next level? Get in touch with us today.</p>
+            <p className="text-foreground/70 mb-8 max-w-xl mx-auto">Ready to take your business to the next level? Get in touch with us today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact"><Button variant="hero" size="xl">Get Started Today</Button></Link>
-              <a href="https://wa.me/923177121841" target="_blank" rel="noopener noreferrer"><Button variant="heroOutline" size="xl">WhatsApp Us</Button></a>
+              <Link to="/contact"><Button variant="cyan" size="xl">Get Started Today</Button></Link>
+              <a href="https://wa.me/923177121841" target="_blank" rel="noopener noreferrer"><Button variant="outline" className="border-border text-foreground hover:bg-secondary" size="xl">WhatsApp Us</Button></a>
             </div>
           </motion.div>
         </div>
