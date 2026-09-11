@@ -19,6 +19,7 @@ import Complaint from "@/pages/Complaint";
 import Verify from "@/pages/Verify";
 import Verification from "@/pages/Verification";
 import HowItWorks from "@/pages/HowItWorks";
+import Blog from "@/pages/Blog";
 import NotFound from "@/pages/NotFound";
 import MaintenancePage from "@/components/MaintenancePage";
 
@@ -77,6 +78,7 @@ const PublicApp = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetail />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
