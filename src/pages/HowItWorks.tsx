@@ -6,7 +6,7 @@ import {
   ShieldCheck, ChevronDown, ChevronUp, ArrowRight, Mail, Phone,
   HelpCircle, Lock, CheckCircle2, Zap, Globe, Headphones,
   MonitorSmartphone, Palette, Bot, ShoppingCart, TrendingUp,
-  Shield, Briefcase, Cloud, Database
+  Shield, Briefcase, Cloud, Database, Server
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
@@ -86,6 +86,7 @@ const businessServices = [
   { icon: TrendingUp, name: "Digital Marketing & SEO" },
   { icon: Briefcase, name: "Brand & Content Strategy" },
   { icon: ShieldCheck, name: "Cyber Security" },
+  { icon: Server, name: "IT Support" },
 ];
 
 /* ─── 3. Payment Flow ─── */
